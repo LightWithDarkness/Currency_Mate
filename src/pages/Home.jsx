@@ -103,7 +103,10 @@ const Home = () => {
                 src="./arrow.svg"
                 alt=""
                 className="w-7 mt-7 cursor-pointer hover:scale-110 transform transition duration-300 ease-in-out"
-                onClick={handleSwap}
+                onClick={() => {
+                  handleSwap();
+                  exchangeRate !== 0 && setExchangeRate(1 / exchangeRate);
+                }}
               />
 
               <div className="to flex flex-col gap-2">
